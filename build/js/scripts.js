@@ -1,3 +1,4 @@
+// Custom Scripts
 // Custom scripts
 
 // Мобильное меню бургер
@@ -32,3 +33,4 @@ function burgerMenu() {
     })
 }
 burgerMenu()
+
