@@ -1,9 +1,9 @@
 // Container
 .container {
-    max-width: ($containerWidth + $containerPadding) + px;
     width: 100%;
-    margin: 0 auto;
+    max-width: ($containerWidth + $containerPadding) + px;
     padding: 0 $containerSidePadding + px;
+    margin: 0 auto;
 
     @media (max-width: $breakpoint1450) {
         max-width: 1200px;
@@ -44,19 +44,20 @@ body {
 
 // Globals styles
 .btn {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 22px;
-    text-transform: uppercase;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 15px 0;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
     transition: .3s ease;
 
     @media (max-width: $breakpoint1450) {
-        font-size: 16px;
+        font-size: 14px;
+        padding: 10px 15px;
     }
 
     &__outline {
@@ -66,11 +67,10 @@ body {
         }
     }
     &__primary {
-        color: $whiteColor;
         background-color: $primaryColor;
+        color: $whiteColor;
         &:hover {
             background-color: $primaryDarkColor;
         }
     }
-    &__secondary { }
 }
