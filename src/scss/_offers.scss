@@ -1,0 +1,130 @@
+.section {
+  &__offers {
+    padding: 50px 0;
+  }
+}
+
+.offers {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  margin-top: 20px;
+  
+  @media (max-width: $breakpoint1450) {
+    justify-content: center;
+  }
+  @media (max-width: $breakpoint768) {
+    gap: 0;
+  }
+  
+  &__item {
+    flex: 0 1 300px;
+    margin-top: 30px;
+    border: 1px solid #E0E5E2;
+
+    @media (max-width: $breakpoint768) {
+      flex: 0 1 100%;
+      margin-top: 20px;
+    }
+  }
+}
+
+.offer {
+  &__img {
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__body {
+    padding: 15px;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: $primaryDarkColor;
+
+    img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 100%;
+    }
+  }
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: capitalize;
+    color: $blackColor;
+    margin-top: 15px;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: $neutralLightBlueColor;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    margin-left: auto;
+    transition: .3s ease;
+    
+    @media (max-width: $breakpoint768) {
+      height: 40px;
+    }
+
+    &:hover {
+      width: 100%;
+      justify-content: flex-end;
+
+      .offer__btn-text {
+        display: block;
+      }
+
+      .offer__arrow {
+        transform: rotate(45deg);
+        transition: .3s transform;
+      }
+
+      .offer__btn-text {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__btn-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: capitalize;
+    color: $blackColor;
+    display: none;
+    animation: fade 1s linear;
+  }
+
+  &__arrow {
+    transform: rotate(0deg);
+    transition: .3s transform;
+  }
+}
+
+// .offers__text
+.offers__text {
+  margin-top: 50px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.3px;
+  color: $primaryDarkColor;
+
+}
